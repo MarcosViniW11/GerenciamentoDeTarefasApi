@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - TaskMaster</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <aside class="sidebar">
+        <div class="logo">
+            <i class="fa-solid fa-list-check"></i>
+            <span>TaskMaster</span>
+        </div>
+
+        <div class="user-profile">
+            <div class="avatar"><i class="fa-solid fa-user"></i></div>
+            <div class="info">
+                <span id="userRole" class="role-badge"></span>
+                <button onclick="logout()" class="btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Sair
+                </button>
+            </div>
+        </div>
+
+        <nav class="categories-section">
+            <h3><i class="fa-solid fa-folder"></i> Categorias</h3>
+            <div class="add-cat">
+                <input type="text" id="catNome" placeholder="Nova pasta...">
+                <button onclick="criarCategoria()"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            <ul id="listaCategorias" class="cat-list">
+                <!-- Dinâmico -->
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="main-header">
+            <h1>Minhas Tarefas</h1>
+            <p>Gerencie seus objetivos diários.</p>
+        </header>
+
+        <section class="task-creation card">
+            <form id="formTarefa" class="task-form">
+                <div class="form-row">
+                    <input type="text" id="taskTitulo" placeholder="O que precisa ser feito?" required>
+                    <select id="taskCatId" required>
+                        <option value="">Categoria...</option>
+                    </select>
+                </div>
+                <textarea id="taskDesc" placeholder="Adicione uma descrição detalhada (opcional)"></textarea>
+                <button type="submit" class="btn-add-task">
+                    <i class="fa-solid fa-calendar-plus"></i> Criar Tarefa
+                </button>
+            </form>
+        </section>
+
+        <section class="task-list-container">
+            <div id="listaTarefas" class="task-grid">
+                <!-- Dinâmico -->
+            </div>
+        </section>
+    </main>
+
+    <script src="tarefas.js"></script>
+</body>
+</html>

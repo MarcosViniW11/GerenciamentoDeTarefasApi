@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Criar Conta</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="auth-wrapper">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Criar Conta</h2>
+                <p>Organize sua rotina de forma simples.</p>
+            </div>
+
+            <form id="formCadastro">
+                <div id="mensagemErro" class="alert-error hidden"></div>
+
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" placeholder="Ex: Marcos Rocha" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="exemplo@email.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <div class="password-container">
+                        <input type="password" id="senha" placeholder="No mínimo 6 caracteres" required>
+                        <button type="button" id="toggleSenha" class="btn-icon">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <button type="submit" id="btnSubmit">
+                    <span class="btn-text">Cadastrar</span>
+                    <span class="loader hidden"></span>
+                </button>
+                
+                <p class="auth-footer">
+                    Já tem uma conta? <a href="../Login/login.html">Fazer Login</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
